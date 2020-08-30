@@ -1,0 +1,17 @@
+<!Doctype html>
+<html xmlns:th="a">
+      <head>
+    <title>Technical Blog Application
+    </title>
+</head>
+<body>
+<h1>HI</h1>
+<main id="posts">
+    <post th:each="p: ${hello}">
+        <h2 th:text="${p.title}"></h2>
+        <p th:text="${p.body}"></p>
+        <i>Created on:</i><span th:text="${p.date}"></span>
+    </post>
+</main>
+</body>
+</html>
