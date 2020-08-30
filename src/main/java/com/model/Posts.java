@@ -1,10 +1,10 @@
-package model;
+package com.model;
 
 import java.util.Date;
 
 public class Posts {
     private String title;
-   private String body;
+    private String body;
     private Date date;
 
     public String getTitle() {
