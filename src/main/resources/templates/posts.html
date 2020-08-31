@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="a">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<header th:replace="layout :: logout"></header>
+<body>
+<main th:each="p:${posts}">
+
+    <div>
+        <h3 th:text="${p.title}"/>
+            <p th:text = "${p.body}">
+        </p>
+        <p th:text="${p.date}"></p>
+
+    </div>
+</main>
+
+</body>
+</html>

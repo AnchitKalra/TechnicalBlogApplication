@@ -6,20 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 @Controller
-public class HomeController {
+public class PostController {
+
     @Autowired
-    PostService posts;
-    @RequestMapping("/")
-        public String homeController(Model model) {
-        ArrayList<Posts> postsArrayList = posts.getPosts();
-        model.addAttribute("posts", postsArrayList);
-        return "index";
+    PostService postService;
+    @RequestMapping("posts")
+    public String getPost(Model model) {
+        ArrayList<Posts> posts = postService.getOnePost();
+        model.addAttribute("posts", posts);
+        return "posts";
 
     }
 }

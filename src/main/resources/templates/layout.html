@@ -1,0 +1,18 @@
+<!Doctype html>
+<html xmlns:th="a">
+<head> </head>
+<header th:fragment="login">
+    <header>
+        <a href="users/login.html" th:href="@{http://localhost:8080/users/login}">LOGIN</a>
+        <a href="users/register.html" th:href="@{users/register}">REGISTER</a>
+    </header>
+
+</header>
+<header th:fragment="logout">
+    <header>
+        <form method="post" th:action="@{users/logout}">
+            <input type="submit" value="LogOut"/>
+        </form>
+    </header>
+</header>
+</html>
