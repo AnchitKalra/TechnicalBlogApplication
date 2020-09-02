@@ -3,16 +3,17 @@
 <head> </head>
 <header th:fragment="login">
     <header>
-        <a href="users/login.html" th:href="@{http://localhost:8080/users/login}">LOGIN</a>
-        <a href="users/register.html" th:href="@{users/register}">REGISTER</a>
+        <a href="users/login.html" th:href="@{/users/login}">LOGIN</a>
+        <a href="users/register.html" th:href="@{/users/register}">REGISTER</a>
     </header>
 
 </header>
 <header th:fragment="logout">
     <header>
-        <form method="post" th:action="@{users/logout}">
+        <form method="post" th:action="@{/users/logout}">
             <input type="submit" value="LogOut"/>
         </form>
+        <a href="createpost.html" th:href="@{controller/createpost}">Create Post</a>
     </header>
 </header>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="a">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<header th:replace="layout :: login"></header>
+<body>
+<form method="post" th:object= "${userregister}">
+    <label for="username">USERNAME:"</label>
+    <input type="text" id="username">
+    <label for="password">PASSWORD:</label>
+    <input type="password" id="password"/>
+    <label for="confirm">CONFIRM PASSWORD:</label>
+    <input type="password" id="confirm"/>
+    <label for="email">EMAIL:</label>
+    <input type="text" id="email"/>
+    <input type="submit" value="REGISTER"/>
+</form>
+</body>
+</html>
