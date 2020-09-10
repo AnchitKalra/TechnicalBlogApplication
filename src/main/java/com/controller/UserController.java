@@ -10,10 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class UserController {
+
     @Autowired
     PostService postService;
 
@@ -39,7 +40,7 @@ public class UserController {
 
     @RequestMapping(value = "users/logout", method =RequestMethod.POST)
     public String logoutUser(Model model) {
-        ArrayList<Posts> posts = postService.getPosts();
+        List<Posts> posts = postService.getPosts();
         model.addAttribute("posts", posts);
         return "index";
     }
